@@ -1,25 +1,22 @@
-<div class="table">
-    <table class="table table-sm caption-top table-info  table-bordered">
+ <div>
+    <table class="caption-top">
         <caption>Lịch Thi</caption>
-        <thead class="table-dark">
         <tr>
-            <th scope="col">Mã Môn Học</th>
-            <th scope="col">Tên Môn Học</th>
-            <th scope="col">Mã Phòng</th>
-            <th scope="col">Tên Phòng</th>
-            <th scope="col">Giờ Bắt Đầu</th>
-            <th scope="col">Số Phút</th>
-            <th scope="col">Tiết Bắt Đầu</th>
-            <th scope="col">Số Tiết</th>
-            <th scope="col">Hình Thức</th>
-            <th scope="col">Tổ Thi</th>
-            <th scope="col">Nhóm Thi</th>
-            <th scope="col">Ngày Thi</th>
+            <th>Mã Môn Học</th>
+            <th>Tên Môn Học</th>
+            <th>Mã Phòng</th>
+            <th>Tên Phòng</th>
+            <th>Giờ Bắt Đầu</th>
+            <th>Số Phút</th>
+            <th>Tiết Bắt Đầu</th>
+            <th>Số Tiết</th>
+            <th>Hình Thức</th>
+            <th>Tổ Thi</th>
+            <th>Nhóm Thi</th>
+            <th>Ngày Thi</th>
         </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let item of data">
-            <th scope="row">{{item.ma_mon_hoc}}</th>
+        <tr *ngFor="let item of data">
+            <th>{{item.ma_mon_hoc}}</th>
             <td>{{item.ten_mon_hoc}}</td>
             <td>{{item.ma_phong}}</td>
             <td>{{item.ten_phong}}</td>
@@ -32,9 +29,5 @@
             <td>{{item.nhom_thi}}</td>
             <td>{{item.ngay_thi}}</td>   
         </tr>     
-        </tbody>  
-        <tfoot></tfoot>     
     </table>
 </div>
-
-
