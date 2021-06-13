@@ -8,6 +8,7 @@ import { LichthiComponent } from './components/lichthi/lichthi.component';
 import { TkbComponent } from './components/tkb/tkb.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
       {path: 'tkb', component:TkbComponent},

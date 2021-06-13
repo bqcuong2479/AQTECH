@@ -7,8 +7,8 @@ import { Injectable } from '@angular/core';
 export class DiemthiService {
 
   constructor(private http:HttpClient) { }
-  getData(){
-    let url =  `/aq/diemhksv/{mssv:"BA20EX003",nhhk:"20191"}`;
+  getData(mssv:string, nhhk:string){
+    let url =  `/aq/diemhksv/{mssv:"${mssv}",nhhk:"${nhhk}"}`;
     return this.http.get(url);
   }
 }

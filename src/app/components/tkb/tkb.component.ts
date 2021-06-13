@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TkbService } from '../../services/tkb/tkb.service'
+
 @Component({
   selector: 'app-tkb',
   templateUrl: './tkb.component.html',
@@ -7,11 +8,17 @@ import { TkbService } from '../../services/tkb/tkb.service'
 })
 export class TkbComponent implements OnInit {
   data:any=[];
-  constructor(private Tkb:TkbService) {
-    this.Tkb.getData().subscribe(data=>{
+  getInputs(value:any)
+  {
+    let Mssv = value.mssv;
+    let Ngay = value.date;
+
+      this.Tkb.getData(Mssv,Ngay).subscribe(data=>{
       this.data=data;
-    })
-   }
+  })
+}
+  constructor(private Tkb:TkbService) {
+  }
 
   ngOnInit(): void {
   }

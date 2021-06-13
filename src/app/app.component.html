@@ -2,9 +2,23 @@
     <header>
         <div class="nav">
             <div class="navbar">
-                <button routerLink="/lichthi" routerLinkActive="activebutton">Xem Lịch Thi</button>
-                <button routerLink="/tkb" routerLinkActive="activebutton">Xem TKB Theo Tuần</button>
-                <button routerLink="/diemthi" routerLinkActive="activebutton">Xem Điểm 1 Học Kì</button>
+                <!-- <button routerLink="/lichthi" routerLinkActive="activebutton">Xem Lịch Thi</button> -->
+                <!-- <button routerLink="/tkb" routerLinkActive="activebutton">Xem TKB Theo Tuần</button> -->
+                <!-- <button routerLink="/diemthi" routerLinkActive="activebutton">Xem Điểm 1 Học Kì</button> -->
+                <button routerLink="/lichthi" routerLinkActive="activebutton"
+                type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Xem Lịch Thi
+                </button>
+
+                <button routerLink="/diemthi" routerLinkActive="activebutton"
+                type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Xem Điểm Thi
+                </button>
+
+                <button routerLink="/tkb" routerLinkActive="activebutton"
+                type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Xem TKB
+                </button>
             </div>
         </div>
     </header>

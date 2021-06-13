@@ -19,3 +19,7 @@ th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+.form-control {
+  width: 300px;
+}

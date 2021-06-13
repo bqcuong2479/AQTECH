@@ -5,8 +5,25 @@ body {
   box-sizing: border-box;
 }
 
+.header-top {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container-input {
+  width: auto;
+  display: flex;
+}
+
+.submit {
+  margin-right: 10%;
+  margin-left: 10px;
+}
+
 header {
-  position: fixed;
   margin-top: 0;
   width: 100%;
 }

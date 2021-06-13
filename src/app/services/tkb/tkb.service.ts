@@ -8,8 +8,8 @@ export class TkbService {
 
   constructor(private http:HttpClient) { }
 
-  getData(){
-    let url = `/aq/tkbtuansv/{mssv:"BA20EX003",tu_ngay:"2020-10-05"}`;
+  getData(mssv:string,date:string){
+    let url = `/aq/tkbtuansv/{mssv:"${mssv}",tu_ngay:"${date}"}`;
     return this.http.get(url);
   }
 }
