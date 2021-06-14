@@ -8,11 +8,10 @@ import { DiemthiService } from 'src/app/services/diemthi/diemthi.service';
 })
 export class DiemthiComponent implements OnInit {
   data:any=[];
-  getInputs(value: any){
+  getInput(value: any){
     
     let Mssv=value.mssv;
     let Nhhk=value.nhhk;
-
     this.Diemthi.getData(Mssv,Nhhk).subscribe(data=>{
       this.data=data;
     })

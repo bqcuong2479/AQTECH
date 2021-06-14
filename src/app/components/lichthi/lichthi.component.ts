@@ -8,13 +8,12 @@ import { LichthiService } from 'src/app/services/lichthi/lichthi.service';
 })
 export class LichthiComponent implements OnInit {
   data:any=[];
-  getInputs(value:any)
+  getInput(value:any)
   {
     let Mssv = value.mssv;
     let Nhhk = value.nhhk;
-
       this.Lichthi.getData(Mssv,Nhhk).subscribe(data=>{
-      this.data=data;
+        this.data=data;
   })
   }
   constructor(private Lichthi:LichthiService) {
