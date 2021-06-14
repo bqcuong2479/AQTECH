@@ -32,3 +32,13 @@ p .title {
   display: flex;
   justify-content: flex-end;
 }
+
+.messenger {
+  color: red;
+}
+
+.caption {
+  position: absolute;
+  margin-top: 20px;
+  font-weight: 600;
+}

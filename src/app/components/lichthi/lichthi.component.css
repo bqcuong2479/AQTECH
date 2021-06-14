@@ -23,3 +23,13 @@ tr:nth-child(even) {
 .form-control {
   width: 300px;
 }
+
+.messenger {
+  color: red;
+}
+
+.caption {
+  position: absolute;
+  margin-top: 20px;
+  font-weight: 600;
+}

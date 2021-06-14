@@ -1,63 +1,70 @@
 <div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Xem lịch thi</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <div class="input" >
-                    <form class="row g-3" #Form="ngForm" (ngSubmit)="getInputs(Form.value)">
-                        <div class="col-auto">
-                            <input type="text" class="form-control" placeholder="Nhập MSSV" ngModel #mssv="ngModel" name="mssv">
-                        </div>
-                        <div class="col-auto">
-                          <input type="text" class="form-control" placeholder="Nhập NHHK" ngModel #nhhk="ngModel" name="nhhk">
-                        </div>
-                        <div class="col-auto">
-                          <button type="submit" [disabled]="Form.invalid" class="btn btn-primary mb-3">Xem Lịch Thi</button>
-                        </div>
-                      </form>
-                </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Xem lịch thi</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="input">
+            <form class="row g-3" #Form="ngForm" (ngSubmit)="getInputs(Form.value)">
+              <div class="col-auto">
+                <input type="text" class="form-control" placeholder="Nhập MSSV" ngModel #mssv="ngModel" name="mssv"
+                  required>
+                <span class="messenger" *ngIf="mssv.errors && (mssv.dirty || mssv.touched)">*Cần phải nhập MSSV</span>
+              </div>
+              <div class="col-auto">
+                <input type="text" class="form-control" placeholder="Nhập NHHK" ngModel #nhhk="ngModel" name="nhhk"
+                  required>
+                <span class="messenger" *ngIf="nhhk.errors && (nhhk.dirty || nhhk.touched)">*Cần phải nhập NHHK</span>
+              </div>
+              <div class="col-auto">
+                <button type="submit" [disabled]="Form.invalid" class="btn btn-primary mb-3">Xem Lịch Thi</button>
+              </div>
+            </form>
           </div>
         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
-    <table class="caption-top">
-        <caption>Lịch Thi</caption>
-        <tr>
-            <th>Mã Môn Học</th>
-            <th>Tên Môn Học</th>
-            <th>Mã Phòng</th>
-            <th>Tên Phòng</th>
-            <th>Giờ Bắt Đầu</th>
-            <th>Số Phút</th>
-            <th>Tiết Bắt Đầu</th>
-            <th>Số Tiết</th>
-            <th>Hình Thức</th>
-            <th>Tổ Thi</th>
-            <th>Nhóm Thi</th>
-            <th>Ngày Thi</th>
-        </tr>
-        <tr *ngFor="let item of data">
-            <th>{{item.ma_mon_hoc}}</th>
-            <td>{{item.ten_mon_hoc}}</td>
-            <td>{{item.ma_phong}}</td>
-            <td>{{item.ten_phong}}</td>
-            <td>{{item.gio_bat_dau}}</td>
-            <td>{{item.so_phut}}</td>
-            <td>{{item.tiet_bat_dau}}</td>
-            <td>{{item.so_tiet}}</td>
-            <td>{{item.hinh_thuc}}</td>
-            <td>{{item.to_thi}}</td>
-            <td>{{item.nhom_thi}}</td>
-            <td>{{item.ngay_thi}}</td>
-        </tr>
-    </table>
+    </div>
+  </div>
+  <span class="caption">Lịch Thi</span>
+  <table class="caption-top">
+    <thead class="table-primary">
+    <tr>
+      <th>Mã Môn Học</th>
+      <th>Tên Môn Học</th>
+      <th>Mã Phòng</th>
+      <th>Tên Phòng</th>
+      <th>Giờ Bắt Đầu</th>
+      <th>Số Phút</th>
+      <th>Tiết Bắt Đầu</th>
+      <th>Số Tiết</th>
+      <th>Hình Thức</th>
+      <th>Tổ Thi</th>
+      <th>Nhóm Thi</th>
+      <th>Ngày Thi</th>
+    </tr>
+    </thead>
+    <tr *ngFor="let item of data">
+      <th>{{item.ma_mon_hoc}}</th>
+      <td>{{item.ten_mon_hoc}}</td>
+      <td>{{item.ma_phong}}</td>
+      <td>{{item.ten_phong}}</td>
+      <td>{{item.gio_bat_dau}}</td>
+      <td>{{item.so_phut}}</td>
+      <td>{{item.tiet_bat_dau}}</td>
+      <td>{{item.so_tiet}}</td>
+      <td>{{item.hinh_thuc}}</td>
+      <td>{{item.to_thi}}</td>
+      <td>{{item.nhom_thi}}</td>
+      <td>{{item.ngay_thi}}</td>
+    </tr>
+  </table>
 </div>
